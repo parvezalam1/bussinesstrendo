@@ -3,8 +3,10 @@ import Image from 'next/image';
 import { Hero } from './components/Hero';
 import { Form } from './components/Form';
 import { LatestNews } from './components/LatestNews';
-import { Footer } from './components/Footer';
-const Homepage = () => <div className="overflow-x-hidden">
+
+const Homepage = () =>{
+return(
+ <div className="overflow-x-hidden">
   <Hero />
   {/* collaboraion process */}
 
@@ -164,6 +166,7 @@ const Homepage = () => <div className="overflow-x-hidden">
     </div>
   </div>
   <LatestNews/>
-</div>;
-
+</div>
+  )
+}
 export default Homepage;

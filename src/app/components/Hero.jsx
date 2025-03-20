@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 export const Hero = () => {
     return (
 
-        <div className="flex lg:flex-row flex-col lg:px-20 h-screen">
+        <div className="flex lg:flex-row flex-col lg:px-20 h-[90vh] mt-24">
             {/* left */}
-            <div className="flex justify-center items-center p-2 lg:order-1 order-2 flex-col gap-3 lg:w-2/4 w-full">
+            <div className="lg:h-[90vh] h-2/4 flex justify-center items-center p-2 lg:order-1 order-2 flex-col gap-3 lg:w-2/4 w-full">
                 <motion.h2
                     className="lg:font-extrabold font-semibold  text-center lg:text-6xl text-xl capitalize"
                     initial={{ x: 1400, y: 200 }}
