@@ -28,7 +28,7 @@ export const Navbar = () => {
     className={`${scroll?"lg:sticky -top-24 translate-y-24 duration-500 transition-all left-0 bg-gray-200 ":"bg-slate-50"}
      fixed w-full h-20 z-50 flex justify-between items-center lg:px-20 px-2`}>
       {/* left */}
-      <motion.div className="w-1/4 font-bold lg:text-3xl text-2xl lg:px-4 px-1"
+      <motion.div className="w-1/4 font-bold lg:text-3xl text-2xl lg:px-4 px-1 flex items-center"
         initial={{ x: -500, y: -200, opacity: 0.2 }}
         animate={{ x: 0, y: 0, opacity: 0.7 }}
         transition={transition}

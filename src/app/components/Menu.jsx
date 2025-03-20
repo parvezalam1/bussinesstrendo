@@ -12,7 +12,17 @@ export const Menu = () => {
         },
         {
             id: 2,
-            name: "Company +"
+            name: "Company +",
+            companySubLists:[
+                {
+                id:1,
+                name:"About Us",
+            },
+                {
+                id:2,
+                name:"Our Gallery",
+            },
+        ]
         },
         {
             id: 3,
@@ -71,13 +81,24 @@ export const Menu = () => {
                             initial={{ x: -300, y: -300 }}
                             animate={{ x: 0, y: 0 }}
                             transition={{ duration: 1.5, type: "spring", stiffness: 100 }}
-                            className="list-none cursor-pointer px-2 py-1 text-md font-medium" key={list.id}>
+                            className="relative mli list-none cursor-pointer px-2 py-1 text-md font-medium" key={list.id}>
                                 {list.name}
+                                <motion.ul
+                                className='absolute top-14 w-full flex flex-col gap-1 left-0 shadow-xl shadow-gray-300 rounded-md'>
+                        {
+                            list.companySubLists?.map((li)=>
+                            <li className=' text-left py-1 px-2 font-medium text-gray-700 hover:bg-slate-200' key={li.id}>{li.name}</li>
+                            )
+                        }
+                        </motion.ul>
                         </motion.li>
                     )
 
                 }
             </ul>
+
+
+
             {
                 open &&
                 <motion.ul 

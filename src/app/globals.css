@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.cardbox{
+    perspective: 500px;
+}
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.cardbox:nth-child(odd):hover .card{
+    transform: rotateY(180deg);
+}
+.cardbox:nth-child(even):hover .card{
+    transform: rotateX(-180deg);
+}
+.card .front,.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.card .back{
+    transform: rotateY(180deg);
+}
+.cardbox:nth-child(even) .card .back{
+    transform: rotateX(180deg);
+}
+.mli ul{
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: 0.5s;
+    opacity: 0;
+}
+.mli:hover ul{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
