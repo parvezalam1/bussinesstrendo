@@ -32,7 +32,8 @@ export const Navbar = () => {
         initial={{ x: -500, y: -200, opacity: 0.2 }}
         animate={{ x: 0, y: 0, opacity: 0.7 }}
         transition={transition}
-      >Busines<b className="font-extrabold text-6xl text-lime-600">s</b>trend<b className="font-extrabold text-6xl text-red-600">o</b></motion.div>
+      >Busines<b className="font-extrabold text-6xl text-lime-600">s</b>trend<b className="font-extrabold text-6xl text-red-600">o</b>
+      </motion.div>
       {/* right */}
       <div className="w-3/4 flex items-center gap-7 justify-end">
         <Menu />

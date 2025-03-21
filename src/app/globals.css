@@ -42,14 +42,16 @@
 }
 .mlist ul{
     visibility: hidden;
-    transform: translateY(30px);
+    transform: translateY(10px);
     transition: 0.5s;
     opacity: 0;
     position: absolute;
 }
-.mlist:hover ul{
+.active ul{
     position: static;
     visibility: visible;
     transform: translateY(0px);
     opacity: 1;
+}
+.mlist:hover ul{
 }
